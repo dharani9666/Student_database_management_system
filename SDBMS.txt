@@ -1,0 +1,67 @@
+1) CREATING STUDENT TABLE AND INSERTING DATA
+
+create table students(studentid int primary key,
+		      firstname varchar(50) not null,
+                      lastname varchar(50) not null,
+		      date_of_birth date,
+                      emailid varchar(30), 
+                      phoneno number(10) not null,
+		      address varchar(100) not null);
+
+INSERT ALL
+INTO students VALUES (1234, 'Ganesh', 'Yadav', TO_DATE('07-08-2000', 'DD-MM-YYYY'), 'ganesh@gmail.com', '2345678914', '167 sr hyd')
+INTO students VALUES (1235, 'Suma', 'Chitiyala', TO_DATE('28-05-2002', 'DD-MM-YYYY'), 'sumach@gmail.com', '2345123487', '28 jb kol')
+INTO students VALUES (1236, 'Grace', 'Lilly', TO_DATE('30-10-2001', 'DD-MM-YYYY'), 'grace@gmail.com', '1234567894', '546 pn ap')
+INTO students VALUES (1237, 'Swathi', 'Kavali', TO_DATE('28-02-2001', 'DD-MM-YYYY'), 'swathi@gmail.com', '7771245849', '12 am hyd')
+INTO students VALUES (1238, 'Grace', 'Jones', TO_DATE('26-12-2002', 'DD-MM-YYYY'), 'gracejones@gmail.com', '2228757413', '58 snr hyd')
+INTO students VALUES (1239, 'Daniel', 'Wilson', TO_DATE('02-09-2002', 'DD-MM-YYYY'), 'danielw@gmail.com', '2228885349', '123 eln st')
+INTO students VALUES (1240, 'John', 'Smith', TO_DATE('15-08-2000', 'DD-MM-YYYY'), 'johns@gmail.com', '9876543215', '456 oak st')
+INTO students VALUES (1241, 'Vijay', 'Sharma', TO_DATE('10-04-2001', 'DD-MM-YYYY'), 'vijaysharma@gmail.com', '1234567892', '99 jbn hyd')
+INTO students VALUES (1242, 'Jadeja', 'Singh', TO_DATE('25-05-2001', 'DD-MM-YYYY'), 'jadej@gmail.com', '1472589639', '485 elob snt')
+INTO students VALUES (1243, 'Martin', 'William', TO_DATE('18-10-2000', 'DD-MM-YYYY'), 'martin@gmail.com', '7771452499', '270 bnk kr')
+INTO students VALUES (1244, 'Allen', 'Mascow', TO_DATE('21-06-2002', 'DD-MM-YYYY'), 'allienmas@gmail.com', '1425142541', '420 tny snr')
+INTO students VALUES (1245, 'Daniel', 'Wilson', TO_DATE('01-03-2003', 'DD-MM-YYYY'), 'danielw@gmail.com', '5432154321', '345 anr kol')
+SELECT * FROM dual;
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2)CREATING COURSE TABLE AND INSERTING DATA
+
+create table course(courseid int primary key,
+                    coursename  varchar(50),
+                    coursefees decimal(10,2),
+                    courseduration int not null);
+
+
+INSERT ALL
+    INTO Course VALUES (401, 'Biotechnology', 90000, 40)
+    INTO Course VALUES (402, 'Automobile Engineering', 80000, 20)
+    INTO Course VALUES (403, 'Artificial Intelligence', 50000, 30)
+    INTO Course VALUES (404, 'Agricultural Engineering', 30000, 40)
+    INTO Course VALUES (405, 'Information Technology', 75000, 20)
+    INTO Course VALUES (406, 'Biochemical Engineering', 87542, 30)
+    INTO Course VALUES (407, 'Cloud Computing', 64572, 40)
+    INTO Course VALUES (408, 'Industrial Engineering', 54675, 20)
+    INTO Course VALUES (409, 'Biomedical Engineering', 98754, 40)
+    INTO Course VALUES (410, 'Marine Engineering', 87945, 30)
+SELECT * FROM dual;
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3)CREATING BATCHES TABLE AND INSERTING DATA
+
+create table batch(batchid number(28) primary key,
+                     batchdate date,
+		     coursed char(4) not null,
+		     batchstrength int not null);
+INSERT ALL
+    INTO batch VALUES (1, TO_DATE('24-04-2024', 'DD-MM-YYYY'), 'C101', 401)
+    INTO batch VALUES (2, TO_DATE('25-04-2024', 'DD-MM-YYYY'), 'C102', 402)
+    INTO batch VALUES (3, TO_DATE('26-04-2024', 'DD-MM-YYYY'), 'C103', 403)
+    INTO batch VALUES (4, TO_DATE('27-04-2024', 'DD-MM-YYYY'), 'C104', 404)
+    INTO batch VALUES (5, TO_DATE('28-04-2024', 'DD-MM-YYYY'), 'C105', 405)
+    INTO batch VALUES (6, TO_DATE('29-04-2024', 'DD-MM-YYYY'), 'C106', 406)
+    INTO batch VALUES (7, TO_DATE('30-04-2024', 'DD-MM-YYYY'), 'C107', 407)
+    INTO batch VALUES (8, TO_DATE('01-05-2024', 'DD-MM-YYYY'), 'C108', 408)
+    INTO batch VALUES (9, TO_DATE('02-05-2024', 'DD-MM-YYYY'), 'C109', 409)
+    INTO batch VALUES (10, TO_DATE('03-05-2024', 'DD-MM-YYYY'),'C110', 410)
+SELECT * FROM dual;
